@@ -18,12 +18,17 @@ create table Livros (
 
 create table Aluguel(
 	nome_cliente varchar(100),
-    cpf varchar(11),
-    
+    cpf varchar(11) unique key,
+    num_celular varchar(10),
+    ISBN_Livro varchar(14),
+    data_alugado date,
+    data_limite date,
+    foreign key Aluguel(ISBN_Livro) references Livros(ISBN)
 );
 
 # Alterar Tabela
 alter table Livros add column ISBN varchar(14) unique key after genero;
+
 
 drop table Livros;
 
@@ -34,9 +39,14 @@ insert into Livros values (
     (4, 'A Divina Comédia - Paraíso', 'Dante Alighieri', 'Ficção', '978-6550970345', '2026-03-04', '2020-03-25'
 );
 
+insert into Aluguel values 
+	('Horácio', '12345678910', '8191234567', '978-8585554125', '2026-04-12', '2026-05-12'),
+    ('Karla', '01987654321', '8197654321', '978-6550970321', '2026-04-13', '2026-05-13');
+
 
 # Acessar tabela
 select * from Livros;
+select * from Aluguel;
 
 # Mostra todas as tabelas
 show full tables;
