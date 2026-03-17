@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    
+   int num;
+
+    printf("Digite um número: ");
+    scanf("%d", &num);
+
+    num = num * num * num;
+
+    printf("O cubo do número é: %d\n", num);
+    
+    return 0;
+}
