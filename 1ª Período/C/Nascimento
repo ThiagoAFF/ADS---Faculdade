@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    
+    int nascimento;
+    printf("Digite o ano de nascimento: ");
+    scanf("%d", &nascimento);
+
+    nascimento = 2026 - nascimento;
+
+    printf("Você tem %d anos\n", nascimento);
+    
+    return 0;
+}
+
