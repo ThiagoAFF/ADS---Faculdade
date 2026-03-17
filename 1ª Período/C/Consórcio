@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+void clear() {
+    printf("\033[2J\033[H");
+}
+
+int main()
+{
+
+    int prest, prestP, prestR;
+    float ValorP, ValorD;
+
+
+    printf("Digite o número total de prestações: ");
+    scanf("%d", &prest);
+    clear();
+    printf("Digite o número de prestações pagas: ");
+    scanf("%d", &prestP);
+    clear();
+    printf("Digite o valor da prestação: ");
+    scanf("%f", &ValorP);
+
+    prestR = prest - prestP;
+    ValorD = (prest - prestP) * ValorP;
+
+    clear();
+    printf("O valor devido é de: R$%.2f\n", ValorD);
+    printf("O número de prestações restantes é %d\n", prestR);
+
+    return 0;
+}
+
+
+
