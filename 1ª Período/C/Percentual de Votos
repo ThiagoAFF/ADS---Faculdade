@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+void clear() {
+    printf("\033[2J\033[H");
+}
+
+int main()
+{
+
+   float totalV, VBranco, VNulo, VValido, i;
+
+    printf("Digite o total de eleitores: ");
+    scanf("%f", &totalV);
+    clear();
+    printf("Digite o valor de Votos Brancos: ");
+    scanf("%f", &VBranco);
+    clear();
+    printf("Digite o valor de Votos Nulos: ");
+    scanf("%f", &VNulo);
+    clear();
+    printf("Digite o valor de Votos Validos: ");
+    scanf("%f", &VValido);
+    clear();
+
+    i = (VBranco / totalV) * 100;
+    printf("Percentual de votos brancos: %.2f%%\n", i);
+    i = (VNulo / totalV) * 100;
+    printf("Percentual de votos nulos: %.2f%%\n", i);
+    i = (VValido / totalV) * 100;
+    printf("Percentual de votos válidos: %.2f%%\n", i);
+
+    return 0;
+}
+
+
+
