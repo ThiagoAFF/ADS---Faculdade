@@ -9,9 +9,6 @@ int main()
 
    float totalV, VBranco, VNulo, VValido, i;
 
-    printf("Digite o total de eleitores: ");
-    scanf("%f", &totalV);
-    clear();
     printf("Digite o valor de Votos Brancos: ");
     scanf("%f", &VBranco);
     clear();
@@ -22,6 +19,7 @@ int main()
     scanf("%f", &VValido);
     clear();
 
+    totalV = VBranco + VNulo + VValido;
     i = (VBranco / totalV) * 100;
     printf("Percentual de votos brancos: %.2f%%\n", i);
     i = (VNulo / totalV) * 100;
@@ -31,6 +29,5 @@ int main()
 
     return 0;
 }
-
 
 
