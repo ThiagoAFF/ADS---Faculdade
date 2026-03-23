@@ -1,4 +1,6 @@
 #include <stdio.h>
+// Alternativamente, usando #include <math.h>, pode-se usar o comando pronto pow(num,3);
+
 
 int main()
 {
