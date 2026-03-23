@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+
+    float metro, centi, mili;
+    printf("Digite o valor em metros: ");
+    scanf("%f", &metro);
+    centi = metro * 100;
+    mili = metro * 1000;
+    clear();
+    printf("O valor em centimetros é: %.2f\n", centi);
+    printf("O valor em milimetros é: %.2f\n", mili);
+}
