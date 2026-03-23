@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+
+    float num, dob, tri;
+
+    printf("Digite o número: ");
+    scanf("%f", &num);
+    clear();
+    dob = num * 2;
+    tri = num * 3;
+    printf("O dobro de %.2f é %.2f\n", num, dob);
+    printf("O triplo de %.2f é %.2f\n", num, tri);
+}
