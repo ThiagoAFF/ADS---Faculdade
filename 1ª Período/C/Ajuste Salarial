@@ -18,7 +18,7 @@ int main()
 
     salF = salI * (1+(ajs/100));
 
-    printf("O novo salário é: %f", salF);
+    printf("O novo salário é: %.2f", salF);
     return 0;
 }
 
