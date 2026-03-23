@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+
+    float A, base, altura;
+
+    printf("Digite a base do retângulo: ");
+    scanf("%f", &base);
+    printf("Digite a altura do retângulo: ");
+    scanf("%f", &altura);
+    A = base * altura;
+    clear();
+    printf("A área do retângulo é: %.2f\n", A);
+}
