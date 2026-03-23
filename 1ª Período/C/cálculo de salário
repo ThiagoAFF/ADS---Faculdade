@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+
+    float horatrab, valorhora, salario;
+    printf("Digite o numero de horas trabalhadas: ");
+    scanf("%f", &horatrab);
+    clear();
+    printf("Digite o valor da hora trabalhada: ");
+    scanf("%f", &valorhora);
+    clear();
+    salario = horatrab * valorhora;
+    printf("O salario do funcionario e: R$%.2f\n", salario);
+}
