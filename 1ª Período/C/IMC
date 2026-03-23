@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void clear() {
+    printf("\033[2J\033[H");
+}
+
+int main()
+{
+
+    float peso, h, imc;
+    printf("Digite seu peso em kg: ");
+    scanf("%f", &peso);
+    clear();
+    printf("Digite sua altura: ");
+    scanf("%f", &h);
+    clear();
+    imc = peso / (h * h);
+    printf("Seu IMC é: %.2f\n", imc);
+
+    return 0;
+}
+
+
