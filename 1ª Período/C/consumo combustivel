@@ -5,10 +5,10 @@ void clear() { printf("\033[2J\033[H"); }
 int main() {
 
   float distancia, combustivel, consumo;
-  printf("Digite a distancia percorrida: ");
+  printf("Digite a distancia percorrida em Km: ");
   scanf("%f", &distancia);
   clear();
-  printf("Digite o combustivel gasto: ");
+  printf("Digite o combustivel gasto em Litros: ");
   scanf("%f", &combustivel);
   consumo = distancia / combustivel;
   clear();
