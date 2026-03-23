@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+
+  float distancia, combustivel, consumo;
+  printf("Digite a distancia percorrida: ");
+  scanf("%f", &distancia);
+  clear();
+  printf("Digite o combustivel gasto: ");
+  scanf("%f", &combustivel);
+  consumo = distancia / combustivel;
+  clear();
+  printf("O consumo medio do veiculo e: %.2f\n", consumo);
+  return 0;
+}
