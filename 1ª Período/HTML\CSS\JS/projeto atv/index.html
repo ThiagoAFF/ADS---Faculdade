@@ -2,20 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
     <title>Document</title>
+    
+    <style>
+        @media (max-width: 768px) {
+            .side-by-side {
+                flex-direction: column;
+            }
+        }
+    </style>
+
 </head>
 <body>
-    <center>
-        <a href="contato.html">
-            <div class="button" >
-                <p>Contato</p>
+    <div class="container">
+        <center>
+            <h1>Recicla E-Lixo</h1>
+            <h2>O que está mudando na tecnologia que aumenta (ou reduz) o e-lixo</h2>
+        </center>
+        
+        <div class="side-by-side">
+            <div class="pdiv1">
+                <div class="home">Tecnologia</div>
+                <p>
+                    <h3>Ciclos acelerados de inovação e obsolescência (muitas vezes percebida)</h3>
+                    Novos modelos de smartphones, notebooks e wearables chegam rápido, com ganhos <br>marginais que incentivam a troca antes do fim da vida útil.<br>
+                    → Efeito: maior fluxo de descarte e acúmulo de aparelhos "funcionais, mas desatualizados".
+                    <br><br>
+                    <h3>Miniaturização e integração (baterias seladas, componentes colados)</h3>
+                    Dispositivos mais finos e selados dificultam reparo e reciclagem (ex.: telas coladas, baterias integradas).<br>
+                    → Efeito: reparos ficam caros ou inviáveis; reciclagem demanda processos mais complexos.
+                    <br><br>
+                    <h3>Explosão do IoT e eletrônicos "embutidos"</h3>
+                    De lâmpadas a eletrodomésticos conectados — o número de dispositivos por pessoa cresce.<br>
+                    → Efeito: maior volume de itens de baixo valor unitário, mas que somam grande massa de e‑lixo.
+                    <br><br>
+                    <h3>Transições tecnológicas (ex.: 3G→4G→5G, TV CRT→LCD→OLED)</h3>
+                    Mudanças de padrão "empurram" substituições em massa. <br>
+                    → Efeito: ondas de descarte concentradas em curto período.
+                </p>
             </div>
-        </a>
-    </center>
+            
+            <div class="pdiv">
+                <details>
+                    <summary><h2>Movimento Social</h2></summary>
+                    <p>
+                        Como comportamento, cultura e pressão pública moldam o setor<br>
+                        <h3>Cultura de consumo e status tecnológico</h3>
+                        Troca por "novidade" (câmera melhor, mais memória) antes de necessidade funcional real.<br>
+                        → Efeito: encurta o ciclo de uso e amplia o descarte precoce.<br>
+                        <h3>Consciência ambiental e "right to repair"</h3>
+                        Crescem campanhas por descarte correto, reuso e reaproveitamento de peças, além de políticas de reparabilidade.<br>
+                        → Efeito: quando a consciência vira hábito (e há pontos de coleta), o fluxo vai do lixo comum para canais de reuso/reciclagem.<br>
+                        <h3>Inclusão digital e recondicionamento</h3>
+                        Programas sociais e comunitários que recondicionam e doam equipamentos prolongam a vida útil.
+                    </p>
+                </details>
+                
+                <details>
+                    <summary><h2>Movimento Econômico</h2></summary>
+                    <p>
+                        O que torna reparar/reciclar viável — ou não<br>
+                        <h3>Custo de reparo vs. preço do novo</h3>
+                        Mão de obra, disponibilidade de peças e design influenciam: se o reparo custa quase o preço do novo, as pessoas trocam.<br>
+                        → Efeito: mais e‑lixo; mercado de assistência técnica fragilizado.<br>
+                        <h3>Preço de commodities e "mineração urbana"</h3>
+                        Eletrônicos contêm cobre, ouro, prata, paládio, alumínio e, em baterias, lítio, cobalto, níquel.<br> Quando os preços sobem, a reciclagem fica mais atrativa.
+                    </p>
+                </details>
+            </div>
+        </div>
+        <br><br><br>
+        <center>
+            <a href="contato.html">
+                <div class="button">
+                    <p>Contato</p>
+                </div>
+            </a>
+        </center>
+    </div>
 </body>
 </html>
