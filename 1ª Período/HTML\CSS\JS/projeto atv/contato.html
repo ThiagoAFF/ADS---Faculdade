@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    <title>Contato</title>
+</head>
+
+<body class="formpage">
+    <form>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" placeholder="digite seu nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="istoeumemail@email.com">
+
+        <label for="tel">Telefone:</label>
+        <input type="tel" id="tel" name="tel" placeholder="(00) 00000-0000" required>
+
+        <label for="subject">Assunto:</label>
+        <input type="text" id="subject" name="subject" placeholder="informe seu assunto" required>
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" placeholder="digite sua mensagem" required></textarea>
+        <br>
+        <iframe src="/Termos.html" title="Termos de Uso" height="500px" width="500px"></iframe>
+        <br>
+
+        <label for="terms">Eu concordo com os termos de uso</label>
+        <input class="check" type="checkbox" id="terms" name="terms" required>
+        
+        <center>
+        <button class="submitbutton" type="submit">Enviar</button>
+        </center>
+    </form>
+</body>
+</html>
