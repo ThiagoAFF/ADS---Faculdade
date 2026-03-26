@@ -1,0 +1,130 @@
+.google-sans-font {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
+}
+
+:root {
+  /* Font family with all properties */
+  --font-google-sans: "Google Sans", sans-serif;
+  
+  /* Individual properties as variables */
+  --font-family-google-sans: "Google Sans", sans-serif;
+  --font-optical-sizing: auto;
+  --font-weight-google-sans: 400; /* Replace with actual weight */
+  --font-style-google-sans: normal;
+  --font-variation-grad: "GRAD" 0;
+}
+
+
+
+body{
+    background-color: #121212;
+    font-family: var(--font-family-google-sans);
+    color: aliceblue;
+}
+
+.button{
+    color: aliceblue;
+    border: solid 2px whitesmoke;
+    border-radius: 25px;
+    padding: 1px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    background-color: #121212;
+}
+
+.button:hover {
+    background-color: #0dc9a0;
+    color: #121212;
+    border-color: white;
+    transform: scale(1.05);
+}
+
+.formpage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    color:#0dc9a0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    border: solid 2px whitesmoke;
+    border-radius: 25px;
+    padding: 20px;
+    width: fit-content;
+}
+
+input {
+    padding: 10px;
+    border: solid 1px #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+    width: 300px;
+    height: 5px;
+    color: #0dc9a0;
+    background-color: #282828;
+    border-color: #282828;
+}
+
+textarea {
+    padding: 10px;
+    border: solid 1px #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+    width: 300px;
+    height: 100px;
+    color: #0dc9a0;
+    background-color: #282828;
+    border-color: #282828;
+}
+
+.submitbutton {
+    color: aliceblue;
+    border: solid 2px whitesmoke;
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color:#07614d;
+    width: 150px;
+}
+
+.submitbutton:hover {
+    background-color: #0dc9a0;
+
+    border-color: white;
+}
+
+.terms {
+    background-color: #2d3733;
+    color: whitesmoke;
+    font-size: 12px;
+}
+
+.agreed {
+    display: flex;
+    flex-direction: row;
+}
+
+.check {
+    height: 20px;
+    width: 20px;
+}
