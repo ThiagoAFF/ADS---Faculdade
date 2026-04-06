@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+
+    int u1, u2, u3, u4;
+    float media;
+
+    printf("Nota primeira unidade: ");
+    scanf("%d", &u1);
+    clear();
+    printf("Nota segunda unidade: ");
+    scanf("%d", &u2);
+    clear();
+    printf("Nota terceira unidade: ");
+    scanf("%d", &u3);
+    clear();
+    printf("Nota quarta unidade: ");
+    scanf("%d", &u4);
+    clear();
+    media = (u1 + u2 + u3 + u4) / 4;
+    printf("Media: %.1f\n", media);
+    if (media >= 7)
+        printf("Aprovado\n");
+    else
+        printf("Reprovado\n");
+}
