@@ -1,0 +1,25 @@
+#include <stdio.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int i = 1, num, min, max = 0;
+
+  printf("Digite o %dº número: ", i);
+  scanf("%d", &num);
+  i++;
+  clear();
+  min = num;
+
+  for(i=2; i<=20; i++){
+    printf("Digite o %dº número: ", i);
+    scanf("%d", &num);
+    if (num < min){
+      min = num;
+    } else if (num > max){
+      max = num;
+    }
+    clear();
+  }
+  printf("O maior numero digitado foi %d e o menor foi %d", max, min);
+  return 0;
+}
