@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+    //Criação das variavéis iniciais
+        float n1, n2;
+        int sel;
+
+    //Seleção de dois números
+        printf("Digite o primeiro número: ");
+        scanf("%f", &n1);
+        clear();
+        printf("Digite o segundo número: ");
+        scanf("%f", &n2);
+        clear();
+        printf("Selecione um método:\nSoma(1)\nSubtração(2)\nMultiplicação(3)\nDivisão(4)\n\nSeleção: ");
+        scanf("%d", &sel);
+        clear();
+
+    //Cálculo através de variavéis
+        float sum = n1 + n2;
+        float dif = n1 - n2;
+        float prod = n1 * n2;
+        float quo = n1 / n2;
+
+    //Switch-Case para selecionar o tipo cálculo
+        switch (sel) {
+            case 1:
+            printf("Resultado: %.1f", sum);
+            break;
+            case 2:
+            printf("Resultado: %.1f", dif);
+            break;
+            case 3:
+            printf("Resultado: %.1f", prod);
+            break;
+            case 4:
+            printf("Resultado: %.1f", quo);
+            break;
+        }
+
+        return 0;
+}
