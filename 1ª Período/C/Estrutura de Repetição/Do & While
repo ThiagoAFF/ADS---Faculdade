@@ -1,0 +1,17 @@
+void clear(){
+  printf("\033[2J\033[H");
+}
+
+int main(){
+  int age, cont = 1;
+
+  do{
+    printf("Digite a idade: ");
+    scanf("%d", &age);
+    cont ++;
+    clear();
+  }while(cont <= 5);
+  
+  
+  return 0;
+}
