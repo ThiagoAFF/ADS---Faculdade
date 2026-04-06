@@ -1,0 +1,17 @@
+#include <stdio.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int i = 0, num, muln, res = 0;
+  printf("Digite um número: ");
+  scanf("%d", &num);
+  clear();
+  printf("Quantas vezes ele deve ser multiplicado? ");
+  scanf("%d", &muln);
+  clear();
+  for (i = 0; i < muln; i++){
+    res = res + num;
+  }
+  printf("Resultado: %d", res);
+  return 0;
+}
