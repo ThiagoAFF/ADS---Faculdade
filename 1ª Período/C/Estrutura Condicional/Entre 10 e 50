@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+
+    float num;
+
+    printf("Digite o número: ");
+    scanf("%f", &num);
+    clear();
+
+    if (num >=10 && num <=50)
+        printf("O número está entre 10 e 50");
+
+    else
+        printf("O número não está entre 10 e 50");
+
+return 0;
+}
