@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+
+    int num, res;
+
+    printf("Digite o número: ");
+    scanf("%d", &num);
+    clear();
+
+    res = num % 2;
+
+    if (res == 0)
+        printf("O número %d é par\n", num);
+    else
+        printf("O número %d é ímpar\n", num);
+}
