@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+
+    char sexo;
+
+    printf("Digite o seu sexo \n utilize [F] ou [M] \n:");
+    scanf("%c", &sexo);
+    clear();
+     if (sexo == 'F' || sexo == 'f')
+         printf("Você digitou sexo Feminino");
+     else if (sexo == 'M' || sexo == 'm')
+         printf("Você digitou sexo Masculino");
+     else
+         printf("Sexo inválido");
+
+return 0;
+}
