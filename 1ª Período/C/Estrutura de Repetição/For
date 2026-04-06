@@ -1,0 +1,16 @@
+void clear(){
+  printf("\033[2J\033[H");
+}
+
+int main(){
+  int age, cont = 1;
+
+ for(cont=1; cont<=37; cont++){
+   printf("Digite sua idade: ");
+   scanf("%d", &age);
+   clear();
+ }
+  
+  
+  return 0;
+}
