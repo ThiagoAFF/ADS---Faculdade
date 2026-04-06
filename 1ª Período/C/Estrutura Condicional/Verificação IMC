@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+
+    float peso, h, imc;
+    printf("Digite seu peso em kg: ");
+ 
+    scanf("%f", &peso);
+ 
+    clear();
+ 
+    printf("Digite sua altura: ");
+ 
+    scanf("%f", &h);
+ 
+    clear();
+ 
+    imc = peso / (h * h);
+ 
+    printf("Seu IMC é: %.2f\n", imc);
+
+    if (imc < 18.5)
+        printf("Você está abaixo do peso.");
+
+    if (imc >= 18.5 && imc < 25)
+        printf("Você está com o peso normal.");
+
+    if (imc >= 25 && imc < 30)
+        printf("Você está com sobrepeso.");
+
+    if (imc >= 30)
+        printf("Você é considerado obeso.");
+ 
+    return 0;
+ 
+}
