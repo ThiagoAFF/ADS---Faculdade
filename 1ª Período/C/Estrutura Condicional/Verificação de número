@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+
+int num;
+
+    printf("Digite o número: ");
+    scanf("%d", &num);
+    clear();
+
+    if (num < 0)
+        printf("O número é negativo.");
+
+    if (num == 0)
+        printf("O número é zero.");
+
+    if (num > 0)
+        printf("O número é positivo");
+
+return 0;
+
+}
