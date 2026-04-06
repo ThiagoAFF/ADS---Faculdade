@@ -1,0 +1,26 @@
+#include <stdio.h>
+void clear(){
+  printf("\033[2J\033[H");
+}
+
+int main(){
+  int notaA, aluno = 0;
+  float notaP = 0;
+
+  while(aluno <= 50){
+    printf("Digite a nota do aluno %d: ", aluno + 1);
+    scanf("%d", &notaA);
+
+    notaP = notaP + notaA;
+
+    aluno++;
+
+  }
+
+  notaP = notaP / aluno;
+
+  printf("A média da turma é: %.1f", notaP);
+  
+  
+  return 0;
+}
