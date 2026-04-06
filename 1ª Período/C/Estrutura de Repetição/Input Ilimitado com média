@@ -1,0 +1,24 @@
+#include <stdio.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int num = 1, n = 0, total = 0;
+  float med;
+
+  while (num > 0){
+    printf("Números inseridos: %d\n", total);
+    printf("Soma dos números: %d\n", n);
+    printf("Digite um número: ");
+    scanf("%d", &num);
+
+    if (num <= 0) break;
+    
+    n += num;
+    total ++;
+    clear();
+  }
+  med = n / total;
+  printf("A média dos números digitados é: %.1f", med);
+  
+  return 0;
+}
