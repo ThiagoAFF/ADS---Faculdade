@@ -1,0 +1,23 @@
+#include <stdio.h>
+void clear(){
+  printf("\033[2J\033[H");
+}
+
+int main(){
+  int num = 1, Mnum;
+  
+  while (num != 0){
+    printf("Digite o número: ");
+    scanf("%d", &num);
+    if(num > Mnum){
+       Mnum = num;
+    };
+    clear();
+    
+      
+  }
+  printf("Repetição terminada!\nMaior número digitado: %d\n", Mnum);
+  
+  
+  return 0;
+}
