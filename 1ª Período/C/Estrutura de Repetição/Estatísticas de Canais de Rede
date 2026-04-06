@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  bool con = true;
+  int esc;
+  char escf;
+  float a_1 = 0, a_2 = 0, a_3 = 0, a_4 = 0,
+        perc, total = 0;
+
+  while (con == true){
+    printf("Escolha qual canal você assiste no momento:\n1 - SBT\n2 - Record\n3 - RedeTV\n4 - Globo\nDigite: ");
+    scanf("%d", &esc);
+
+    switch (esc){
+      case 1:
+        a_1++;
+        total++;
+      break;
+      case 2:
+        a_2++;
+      total++;
+      break;
+      case 3:
+        a_3++;
+      total++;
+      break;
+      case 4:
+        a_4++;
+      total++;
+      break;
+      default:
+       printf("Opção inválida!\n");
+        break;
+    }
+    clear();
+    printf("Continuar? (S/N): ");
+    scanf(" %c", &escf);
+    clear();
+    if (escf == 'N' || escf == 'n')
+       con = false;
+    else if (escf == 'S' || escf == 's')
+       con = true;
+    else{
+      printf("Opção inválida!\n"); 
+      break;
+    }
+  }
+  perc = (a_1/total)*100;
+  printf("A porcentagem de pessoas que assistem ao SBT é de %.2f%%\n", perc);
+  perc = (a_2/total)*100;
+  printf("A porcentagem de pessoas que assistem à Record é de %.2f%%\n", perc);
+  perc = (a_3/total)*100;
+  printf("A porcentagem de pessoas que assistem à RedeTV é de %.2f%%\n", perc);
+  perc = (a_4/total)*100;
+  printf("A porcentagem de pessoas que assistem à Globo é de %.2f%%\n", perc);
+
+  if(a_1 > a_2 && a_1 > a_3 && a_1 > a_4){
+    printf("O canal mais assistido é o SBT\n");
+  }
+  if(a_2 > a_1 && a_2 > a_3 && a_2 > a_4){
+    printf("O canal mais assistido é a Record\n");
+  }
+  if(a_3 > a_1 && a_3 > a_2 && a_3 > a_4){
+    printf("O canal mais assistido é a RedeTV\n");
+  }
+  if(a_4 > a_1 && a_4 > a_2 && a_4 > a_3){
+    printf("O canal mais assistido é a Globo\n");
+  }
+
+  if (a_1 < a_2 && a_1 < a_3 && a_1 < a_4){
+    printf("O canal menos assistido é o SBT\n");
+  }
+  if (a_2 < a_1 && a_2 < a_3 && a_2 < a_4){
+    printf("O canal menos assistido é a Record\n");
+  }
+  if (a_3 < a_1 && a_3 < a_2 && a_3 < a_4){
+    printf("O canal menos assistido é a RedeTV\n");
+  }
+  if (a_4 < a_1 && a_4 < a_2 && a_4 < a_3){
+    printf("O canal menos assistido é a Globo\n");
+  }
+  
+  return 0;
+}
