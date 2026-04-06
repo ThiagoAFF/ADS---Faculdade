@@ -1,0 +1,20 @@
+#include <stdio.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int num = 1, exc, numSum = 0;
+
+  for(num = 1; num <= 5; num++){
+    printf("Digite um número: ");
+    scanf("%d", &exc);
+    if((exc % 2) != 0 && exc <= 200 && exc >= 100){
+      numSum = numSum + exc;
+    };
+
+    clear();
+  }
+
+  printf("A soma dos números ímpares, cujo valores se encontram entre 100 e 200 são: %d", numSum);
+
+  return 0;
+}
