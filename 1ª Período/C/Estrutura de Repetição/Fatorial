@@ -1,0 +1,15 @@
+#include <stdio.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int i = 1, fat = 1, num;
+
+  printf("Digite um numero: ");
+  scanf("%d", &num);
+  for(i = 1; i <= num; i++){
+    fat = fat * i;
+  }
+
+  printf("%d!: %d", num, fat);
+  return 0;
+}
