@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int i = 1, num = 0;
+
+  while(i!=0){
+    printf("Digite um numero (0 para encerrar): ");
+    scanf("%d", &i);
+    num += i;
+    clear();
+  }
+  printf("Soma: %d", num);
+  return 0;
+}
