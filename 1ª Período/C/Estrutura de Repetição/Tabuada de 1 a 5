@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int i = 1, num = 1;
+
+  do{
+    do{
+      printf("%d x %d = %d\n", i, num, i * num);
+      num++;
+    } while (num <= 10);
+    i++;
+    num = 1;
+  } while (i <= 5);
+
+}
