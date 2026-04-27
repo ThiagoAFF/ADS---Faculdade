@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int total = 0;
+  float nota = 0, i = 0, media;
+
+  while (i!=-1){
+    clear();
+    printf("Digite a nota: ");
+    scanf("%f", &i);
+    if (i!=-1){
+      total++;
+      nota += i;
+    }
+    
+  }
+  media = nota / total;
+  printf("Média: %.0f\n", media);
+  
+  return 0;
+}
