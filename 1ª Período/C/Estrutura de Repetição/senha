@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int i = 0, senha = 1234;
+  printf("Digite a senha: ");
+  scanf("%d", &i);
+  clear();
+  while(i!=senha){
+    printf("Senha incorreta!\nDigite novamente: ");
+    scanf("%d", &i);
+    clear();
+  }
+  printf("Senha correta!");
+  return 0;
+}
