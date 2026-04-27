@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int i = 1, par = 0, impar = 0;
+
+  while (i <= 50){
+    if(i%2==0){
+      par++;
+    }else{
+      impar++;
+    }
+  i++;
+}
+
+  printf("Pares: %d\n", par);
+  printf("Impares: %d\n", impar);
+  return 0;
+}
