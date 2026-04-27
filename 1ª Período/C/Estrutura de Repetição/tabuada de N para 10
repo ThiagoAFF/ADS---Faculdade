@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int i = 1, num = 0;
+
+  printf("Digite um número: ");
+  scanf("%d", &num);
+  clear();
+  printf("Tabuada do %d\n", num);
+  while(i<=10){
+    printf("%d x %d = %d\n", num, i, num*i);
+    i++;
+  }
+  return 0;
+}
