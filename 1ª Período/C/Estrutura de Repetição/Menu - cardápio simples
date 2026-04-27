@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int escolha;
+  float n1, n2, n3, n4, total;
+  bool end = false, Bife = false, Lasanha = false, Suco1L = false, Suco2L = false;
+
+  while(end == false){
+  printf("Menu - Pratos Principais\n1- Bife Acebolado(R$12.50)\n2- Lasanha(R$8.00)\n3- Suco 1L(R$3.50)\n4- Suco 2L (R$6.00)\nDigite o numero do prato desejado: ");
+  scanf("%d", &escolha);
+
+  switch (escolha){
+      case 1:
+        Bife = true;
+        printf("Bife Acebolado\nQuantidade: ");
+        scanf("%f", &n1);
+        n1 = n1 * 12.50;
+        break;
+      case 2:
+        Lasanha = true;
+        printf("Lasanha\nQuantidade: ");
+        scanf("%f", &n2);
+        n2 = n2 * 8.00;
+        break;
+      case 3:
+        Suco1L = true;
+        printf("Suco 1L\nQuantidade: ");
+        scanf("%f", &n3);
+        n3 = n3 * 3.50;
+        break;
+      case 4:
+        Suco2L = true;
+        printf("Suco 2L\nQuantidade: ");
+        scanf("%f", &n4);
+        n4 = n4 * 6.00;
+        break;
+  }
+    printf("Deseja mais alguma coisa?\n1- Sim\n2- Nao\n");
+    scanf("%d", &escolha);
+    if(escolha == 2){
+      end = true;
+    }
+    if(escolha == 1){
+      end = false;
+    }
+    else {
+      printf("Opcao invalida\n");
+    }
+    clear();
+  }
+
+  total = n1 + n2 + n3 + n4;
+  if(Bife==true){
+    printf("Bife Acebolado: R$%.2f\n", n1);
+  }
+   if(Lasanha==true){
+    printf("Lasanha: R$%.2f\n", n2);
+  }
+  if(Suco1L==true){
+    printf("Suco 1L: R$%.2f\n", n3);
+  }
+  if(Suco2L==true){
+    printf("Suco 2L: R$%.2f\n", n4);
+  }
+  printf("Total: R$%.2f\n", total);
+  
+  
+  return 0;
+}
