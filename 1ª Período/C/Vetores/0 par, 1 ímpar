@@ -4,9 +4,9 @@ void clear() { printf("\033[2J\033[H"); }
 
 int main() {
   int p; // p = Parágrafo
-  float v[10]; // v = Vetor
+  float v[100]; // v = Vetor
 
-  for (p = 1; p <= 10; p++){
+  for (p = 1; p <= 100; p++){
     if((p % 2) == 0){
       v[p] = 0;
     }
