@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int p, total; // p = Parágrafo
+  float A[20], B[20], C[20];// v = Vetor
+
+  for (p = 0; p <= 19; p++){
+    printf("Digite o %dº número do Grupo A: ", p + 1);
+    scanf("%f", &A[p]);
+    clear();
+  }
+
+  for (p = 0; p <= 19; p++){
+    printf("Digite o %dº número do Grupo B: ", p + 1);
+    scanf("%f", &B[p]);
+    clear();
+  }
+
+  for (p = 0; p <= 19; p++){
+     C[p] = A[p] * B[p];
+  }
+  
+  printf("O resultado da multiplicação dos vetores é:\n");
+
+  for (p = 0; p <= 19; p++){
+    printf("%.1f\n", C[p]);
+  }
+
+
+
+  return 0;
+}
