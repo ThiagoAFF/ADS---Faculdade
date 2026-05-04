@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int p, total; // p = Parágrafo
+  int v[10]; // v = Vetor
+
+  for (p = 0; p <= 9; p++){
+    printf("Digite o %dº número: ", p);
+    scanf("%d", &v[p]);
+    clear();
+  }
+
+  total = v[0] + v[1] + v[2] + v[3] + v[4] + v[5] + v[6] + v[7] + v[8] + v[9];
+  
+  printf("Valor total: %d", total);
+
+  return 0;
+}
