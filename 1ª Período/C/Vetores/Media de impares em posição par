@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int p, A[100]; // p = Parágrafo
+  float Ntotal=0, valorTotal=0, media;// v = Vetor
+
+  for (p = 0; p <= 99; p++){
+    printf("Digite o número: ");
+    scanf("%d", &A[p]);
+    if(p % 2 == 0){
+      if(A[p] % 2 != 0){
+        Ntotal++;
+        valorTotal += A[p];
+      }
+    }
+    clear();
+  }
+
+  if (Ntotal != 0){
+     media = valorTotal / Ntotal;
+     printf("A média dos números ímpares nas posições pares é: %.2f", media);
+  }
+  
+  return 0;
+}
