@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int p, k; // p = Parágrafo
+  float A[20], min = 0, max = 0;// v = Vetor
+
+  for (p = 0; p <= 19; p++){
+    printf("Digite o %dº número: ", p + 1);
+    scanf("%f", &A[p]);
+    clear();
+  }
+
+  for (p = 0; p <= 19; p++){
+    if(A[p] >= max){
+      max = A[p];
+    } else if (A[p] <= min){
+      min = A[p];
+    }
+  }
+
+  printf("O maior número é: %.1f\n", max);
+  printf("O menor número é: %.1f", min);
+
+  return 0;
+}
