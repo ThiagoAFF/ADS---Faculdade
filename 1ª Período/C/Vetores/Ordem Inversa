@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int p, k; // p = Parágrafo
+  float A[100];// v = Vetor
+
+  for (p = 99; p >= 0; p--){
+    printf("Digite o número: ");
+    scanf("%f", &A[p]);
+    clear();
+  }
+
+  for (p = 0; p<=99; p++){
+    printf("%.1f\n", A[p]);
+  }
+  
+  return 0;
+}
