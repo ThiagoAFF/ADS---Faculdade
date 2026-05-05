@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdbool.h>
+void clear() { printf("\033[2J\033[H"); }
+
+int main() {
+  int p; // p = Parágrafo
+  float A[10], total = 0, med, nNota = 0; // v = Vetor
+
+  for (p = 0; p <= 9; p++){
+    printf("Digite a %dº nota: ", p + 1);
+    scanf("%f", &A[p]);
+    total += A[p];
+    nNota++;
+    clear();
+  }
+
+  med = total / nNota;
+
+  printf("A média das notas é: %.1f\n", med);
+
+
+  return 0;
+}
