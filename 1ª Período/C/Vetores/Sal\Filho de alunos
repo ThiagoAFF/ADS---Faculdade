@@ -52,10 +52,13 @@ int main() {
     clear();
   }
 
+  //Cálculos
+  
   mediaSal = totalSal / alunos;
   mediaFilhos = totalfilhos / alunos;
-
   porcentagem = (filhos2 / alunos) * 100;
+
+  //Prints Finais
   printf("A média de salário dos alunos é: %.2f\n", mediaSal);
   printf("A média de filhos dos alunos é: %.2f\n", mediaFilhos);
   printf("O maior salário é: %.2f\n", Msal);
