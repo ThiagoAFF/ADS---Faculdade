@@ -3,9 +3,18 @@
 void clear() { printf("\033[2J\033[H"); }
 
 int main() {
-  int p;
+  int p, n;
   float filhos2 = 0, sal, Msal = 0, msal, mediaSal, mediaFilhos, filhos, alunos = 0, totalfilhos = 0, totalSal = 0, porcentagem;
 
+
+  printf("Quantos alunos participarão? ");
+  scanf("%d", &n);
+  clear();
+  if(n < 1){
+    printf("Número inválido ou nulo de alunos!");
+    return 0;
+  }
+  
   printf("Digite o valor de seu salário: ");
   scanf("%f", &sal);
   printf("Digite o número de filhos: ");
@@ -19,8 +28,9 @@ int main() {
   totalSal += sal;
   msal = sal;
   Msal = sal;
+  clear();
   
-  for (p = 2; p <= 1000; p++){
+  for (p = 2; p <= n; p++){
     printf("Digite o valor de seu salário: ");
     scanf("%f", &sal);
     printf("Digite o número de filhos: ");
@@ -46,10 +56,10 @@ int main() {
   mediaFilhos = totalfilhos / alunos;
 
   porcentagem = (filhos2 / alunos) * 100;
-  printf("A média de salário da população é: %.2f\n", mediaSal);
-  printf("A média de filhos da população é: %.2f\n", mediaFilhos);
+  printf("A média de salário dos alunos é: %.2f\n", mediaSal);
+  printf("A média de filhos dos alunos é: %.2f\n", mediaFilhos);
   printf("O maior salário é: %.2f\n", Msal);
   printf("O menor salário é: %.2f\n", msal);
-  printf("A porcentagem de pessoas com mais de 2 filhos é: %.2f\n", porcentagem);
+  printf("A porcentagem de alunos com mais de 2 filhos é: %.2f\n", porcentagem);
   return 0;
 }
