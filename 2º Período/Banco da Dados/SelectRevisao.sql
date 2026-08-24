@@ -138,7 +138,7 @@ values
 (5, 4, "2026.1", 7.8),
 (6, 5, "2026.1", 8.2);
 
--- 9
+-- 9 - Início de Select
 select ALUNO.nome, CURSO.nome
 from ALUNO
 join CURSO on ALUNO.id_curso = CURSO.id_curso;
@@ -180,3 +180,17 @@ left join MATRICULA on DISCIPLINA.id_disciplina = MATRICULA.id_disciplina;
 -- or
 select D.id_disciplina, D.nome, D.nome_professor, M.id_aluno from DISCIPLINA D
 left join matricula m on m.id_DISCIPLINA = d.id_DISCIPLINA;
+
+-- 19 - Início de Update
+-- Sem o where, todas as linhas serão atualizadas. O mesmo é válido para DELETE
+update MATRICULA 
+set nota = 10
+where id_disciplina = 1;
+
+select * from MATRICULA;
+
+-- 20
+-- Não usar ' = ' para comparar null, mas usar o ' is ' | Edit -> Turn Safe OFF | Query -> Reconnect to Server
+update MATRICULA
+set nota = 7
+where nota is null;
