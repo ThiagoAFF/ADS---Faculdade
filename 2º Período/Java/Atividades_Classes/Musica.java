@@ -31,7 +31,7 @@ public class Musica {
         System.out.println(avaliacao());
     }
 
-    void main(String args[]){
+    static void main(String args[]){
         Musica musica1 = new Musica();
 
         System.out.print("Digite o nome da música: ");
