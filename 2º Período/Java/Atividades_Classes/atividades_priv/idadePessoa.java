@@ -1,6 +1,6 @@
 package Atividades_Classes.atividades_priv;
 
-public class Pessoa {
+public class idadePessoa {
     private String nome;
     private int idade;
 
