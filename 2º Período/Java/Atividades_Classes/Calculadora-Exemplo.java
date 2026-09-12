@@ -1,4 +1,4 @@
-package Atividades_Classes;
+package atividades_classes;
 class Calculadora {
     String marca;
     String tipo;

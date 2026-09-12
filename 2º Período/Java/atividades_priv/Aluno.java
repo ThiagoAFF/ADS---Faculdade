@@ -1,4 +1,4 @@
-package Atividades_Classes.atividades_priv;
+package atividades_priv;
 
 public class Aluno {
     private String nome;

@@ -1,4 +1,4 @@
-package Atividades_Classes;
+package atividades_classes;
 
 public class Pessoa {
 
