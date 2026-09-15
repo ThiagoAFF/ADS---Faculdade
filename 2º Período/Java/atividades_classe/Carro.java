@@ -1,4 +1,4 @@
-package atividades_classes;
+package atividades_classe;
 import java.time.LocalDateTime;
 
 public class Carro {

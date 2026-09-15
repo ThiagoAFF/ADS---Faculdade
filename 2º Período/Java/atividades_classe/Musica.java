@@ -1,4 +1,4 @@
-package atividades_classes;
+package atividades_classe;
 import java.util.Scanner;
 
 public class Musica {
