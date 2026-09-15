@@ -1,6 +1,6 @@
 package atividades_subclasses;
 
-public class ContaBancaria {
+public class Conta {
     //Atributos
     protected  int numeroConta;
     protected double saldo;
@@ -52,7 +52,7 @@ public class ContaBancaria {
     }
 }
 
-class ContaCorrente extends ContaBancaria{
+class ContaCorrente extends Conta{
     double tarifaM;
 
     public double getTarifaM(){
@@ -71,5 +71,11 @@ class ContaCorrente extends ContaBancaria{
             this.saldo -= tarifaM;
             System.out.println("Foram descontados " + tarifaM + " da conta");
         }
+    }
+
+    public boolean transferir(double valor, Conta destino){
+        this.sacar(valor);
+        destino.depositar(valor);
+        return true;
     }
 }
