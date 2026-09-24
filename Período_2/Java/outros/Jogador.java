@@ -49,4 +49,13 @@ public class Jogador {
     public int getCON(){
         return CON;
     }
+
+    // Construtor
+    public Jogador(String nome, float HP, int FOR, int DEX, int CON){
+        this.nome = nome;
+        this.HP = HP;
+        this.FOR = FOR;
+        this.DEX = DEX;
+        this.CON = CON;
+    }
 }
